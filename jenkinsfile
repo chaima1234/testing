@@ -42,5 +42,13 @@ pipeline {
                 }
             }
         }
+        stage ("email notification"){
+       
+        steps{
+        mail bcc: '', body: 'hi i am jenkins', cc: '', from: '', replyTo: '', subject: 'build status', 
+        to: 'chames.benalaya@gmail.com'
+          }
+        }
+        
 }
 }
